@@ -103,3 +103,41 @@ a{color:inherit}
   .burger{display:block;margin-left:auto}
   .header-in .btn{display:none}
 }
+
+/* --- v2 additions: hero slider, sub-pages --- */
+.slider{position:relative;height:560px;overflow:hidden;background:#07452a}
+.slides{position:absolute;inset:0}
+.slide{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1s ease}
+.slide.active{opacity:1}
+.slider-overlay{position:absolute;inset:0;display:flex;align-items:center;
+  background:linear-gradient(90deg,rgba(7,69,42,.88) 0%,rgba(7,69,42,.55) 55%,rgba(7,69,42,.15) 100%);
+  color:#fff}
+.slider-overlay h1{font-size:54px;line-height:1.1;margin:12px 0 14px}
+.slider-dots{position:absolute;bottom:18px;left:50%;transform:translateX(-50%);display:flex;gap:8px;z-index:5}
+.slider-dots button{width:12px;height:12px;border-radius:50%;border:2px solid #fff;background:transparent;cursor:pointer;padding:0}
+.slider-dots button.on{background:var(--gold);border-color:var(--gold)}
+
+.page-banner{background:linear-gradient(120deg,#07452a,#0a5c36);color:#fff}
+.page-banner .wrap{padding:52px 20px}
+.page-banner h1{font-size:42px;line-height:1.15}
+.page-banner p{color:#cfe6da;margin-top:6px}
+
+.vc-photo{width:180px;height:180px;object-fit:cover;border-radius:50%;
+  border:4px solid var(--gold);margin:0 auto 16px;display:block}
+.news-img{width:100%;height:190px;object-fit:cover;display:block}
+
+.checklist{margin:12px 0 0 18px;color:#33475b}
+.checklist li{margin-bottom:8px}
+.steps{margin:12px 0 0 22px;color:#33475b}
+.steps li{margin-bottom:14px}
+.demo-form{display:flex;flex-direction:column;gap:12px;margin-top:8px}
+.demo-form label{font-weight:600;color:var(--ink);font-size:14.5px}
+.demo-form input,.demo-form textarea{width:100%;margin-top:6px;padding:10px 12px;
+  border:1px solid var(--line);border-radius:8px;font:inherit}
+.demo-form button{cursor:pointer;align-self:flex-start}
+
+@media(max-width:860px){
+  .slider{height:480px}
+  .slider-overlay h1{font-size:36px}
+  .page-banner h1{font-size:32px}
+}
