@@ -37,3 +37,26 @@ document.querySelectorAll('.stat strong').forEach(function (el) {
   function restart() { clearInterval(timer); timer = setInterval(next, 5000); }
   restart();
 })();
+
+// Demo contact form: success + error messages (ship-checks 12, 13)
+document.addEventListener('DOMContentLoaded', function () {
+  var form = document.querySelector('.demo-form');
+  var msg = document.getElementById('form-msg');
+  if (!form || !msg) return;
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var name = form.querySelector('input[type="text"]').value.trim();
+    var email = form.querySelector('input[type="email"]').value.trim();
+    var text = form.querySelector('textarea').value.trim();
+    var emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    msg.hidden = false;
+    if (!name || !emailOk || !text) {
+      msg.textContent = 'Please fill in your name, a valid email address, and a message before sending.';
+      msg.className = 'form-msg err';
+    } else {
+      msg.textContent = 'Thanks! This is a demo form, so nothing was actually sent. For real enquiries, please use the official contact page.';
+      msg.className = 'form-msg ok';
+      form.reset();
+    }
+  });
+});
