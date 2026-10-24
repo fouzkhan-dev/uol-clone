@@ -101,7 +101,8 @@ a{color:inherit}
   .nav.open{display:flex}
   .burger{display:block;margin-left:auto}
   .header-in .btn{display:none}
-  .crest{width:46px;height:46px}
+  .brand-logo{height:44px}
+  .demo-pill{font-size:9px;padding:2px 6px}
   .brand-text strong{font-size:19px}
   .slider-dots{bottom:10px}
   .slider-overlay .wrap{padding-bottom:38px}
@@ -148,3 +149,7 @@ a{color:inherit}
 .form-msg{margin-top:12px;padding:12px 14px;border-radius:8px;font-weight:600}
 .form-msg.ok{background:#e6f4ea;color:#14532d;border:1px solid #a7d7b0}
 .form-msg.err{background:#fdecea;color:#7f1d1d;border:1px solid #f5c2c0}
+
+.brand-logo{height:52px;width:auto;flex:none}
+.demo-pill{background:var(--gold);color:#1d2733;font-size:10px;font-weight:800;
+  letter-spacing:1px;padding:3px 8px;border-radius:999px;white-space:nowrap;align-self:center}
